@@ -935,6 +935,11 @@ i{
 
 }
 
+body {
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
 
 /* Add a media query for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
@@ -942,17 +947,21 @@ i{
         padding: 5%;
     }
 
-    .left-column, .right-column {
-        padding-left: 15px;
-        padding-right: 15px;
+    .container_2, .container_3, .container_4, .container_5, .container_6, .container_7, .container_8 {
+        width: 100%;
     }
 
-    .main-text {
-        font-size: 40px;
+    .rounded-container, .circle-container, .inner-circle, .custom-container, .custom-column, .item-container, .circle_6_1, .button_11, .button_22, .button_33, .button_44, .polo {
+        margin: 0;
+        padding: 10px;
     }
 
-    .sub-text {
-        font-size: 18px;
+    .left-column, .right-column, .lefti-column, .righti-column, .content9, .main_6_1, .trip {
+        padding: 10px;
+    }
+
+    .main-text, .sub-text {
+        font-size: 24px;
     }
 
     .stars-container {
@@ -965,41 +974,27 @@ i{
     }
 
     .inner-circle {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
 
-    .custom-container {
-        flex-direction: column;
+    .custom-column:first-child {
+        font-size: 24px;
     }
 
-    .custom-column {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    .item-container {
-        width: 100%;
-    }
-
-    .middle_contain img {
-        width: 30px;
-        height: 30px;
-        margin-left: 90%;
+    .item-container img {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
     }
 
     .container_3 {
         margin-top: 5%;
     }
 
-    .container_4, .container_5, .container_6, .container_7, .container_8 {
-        width: 100%;
-    }
-
-    .middle_contain, .mid_h1, .bottom_contain {
-        padding-left: 0;
-        margin-left: 0;
+    .mid_h1, .bottom_contain {
+        padding-left: 10px;
+        margin-left: 10px;
     }
 
     .circle-container img:nth-child(1),
@@ -1037,21 +1032,18 @@ i{
     }
 
     .circle_6_1 img {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
     }
 
     .button_11, .button_22, .button_33, .button_44 {
         width: 100%;
+        margin-top: 10px;
     }
 
     .main_6_1 {
         flex-direction: column;
         margin-bottom: 10px;
-    }
-
-    .trip {
-        margin-left: 0;
     }
 
     .ghost_5 {
@@ -1075,4 +1067,3 @@ i{
         border-radius: 10px;
     }
 }
-
