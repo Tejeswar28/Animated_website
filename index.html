@@ -28,127 +28,225 @@
              margin: 0;
         }
         .container_2{
- background-color: #CBC3E3;
- display: flex;
- border-top-left-radius: 30px;
- border-top-right-radius: 30px;
- border-bottom-left-radius:30px;
- border-bottom-right-radius:30px ;
- padding-bottom: 10%;
- margin-top:2.5%;
-      padding-left: 3%;
-      padding-right:3%;
+             background-color: #CBC3E3;
+             display: flex;
+             border-top-left-radius: 30px;
+             border-top-right-radius: 30px;
+             border-bottom-left-radius:30px;
+             border-bottom-right-radius:30px ;
+             padding-bottom: 10%;
+             margin-top:2.5%;
+             padding-left: 3%;
+             padding-right:3%;
         }
         .rounded-container {
             border-radius: 50px;
             overflow: hidden;
         }
-        .container_1{
-              background-color: white;
-            
-        }
-
-
-         .left-column_1 {
+             .left-column {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
-           padding-left: 60px;
-            
+            padding-left: 60px;
+            position: relative;
         }
-        .right-column_1{
+
+        .right-column {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding-left: 30px;
-    
+            position: relative;
         }
 
-        .sub-text_1{
-            padding-top:30px;
-            font-size:25px;
+        .sub-text {
+            padding-top: 30px;
+            font-size: 25px;
         }
-        .main-text_1 {
+
+        .main-text {
             text-align: left;
             font-size: 80px;
             font-weight: bold;
-             line-height: 1;
+            line-height: 1;
         }
 
-       .sub-columns_1 {
+        .sub-columns {
             display: flex;
-         
         }
 
-        .button_1 {
+        .button {
             color: white;
-           background-color: black;
+            background-color: black;
             padding: 10px 20px;
             border-radius: 10px;
             display: flex;
             align-items: center;
         }
 
-        .button_1 img {
+        .button img {
             width: 40px;
             height: 40px;
             margin-right: 5px;
         }
 
-        .button-text_1 {
+        .button-text {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .stars-container_1 {
+        .stars-container {
             display: flex;
             align-items: center;
-            padding-left:30px;
-
-        }
-        .checked{
-            color:orange;
-        }
-        .gapping{
-            padding:5px;
-        }
-        .star-text_1{
-            padding-left:30px;
+            padding-left: 30px;
         }
 
-        .circle-container_1 {
+        .checked {
+            color: orange;
+        }
+
+        .gapping {
+            padding: 5px;
+        }
+
+        .star-text {
+            padding-left: 30px;
+        }
+
+        .circle-container {
             position: relative;
-            width: 15cm;
-            height: 15cm;
             border: 3px dashed white;
             border-radius: 50%;
+             position: relative;
+      width: 15cm;
+      height: 15cm;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 10px;
         }
+.circle-container img {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      top: 43%;
+      left: 43%;
+      transform: translate(-50%, -50%);
+    }
 
-        .inner-circle_1 {
+    .circle-container img:nth-child(1) {
+      transform: rotate(60deg) translate(7cm);
+    }
+
+    .circle-container img:nth-child(2) {
+      transform: rotate(120deg) translate(7cm);
+    }
+
+    .circle-container img:nth-child(3) {
+      transform: rotate(180deg) translate(7cm);
+    }
+
+    .circle-container img:nth-child(4) {
+      transform: rotate(240deg) translate(7cm);
+    }
+
+    .circle-container img:nth-child(5) {
+      transform: rotate(300deg) translate(7cm);
+    }
+
+    .circle-container img:nth-child(6) {
+      transform: translate(7cm);
+    }
+
+        .inner-circle {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 55%;
+            left: 48%;
             transform: translate(-50%, -50%);
-            background-color: violet;
-            width: 400px; /* Adjust the inner circle size as needed */
-            height: 400px;
+            background: url("https://cdn.dribbble.com/userupload/10874821/file/original-0b9417462ee62cda44fab6f04b894ab2.png?resize=400x0");
+            width: 450px;
+            height: 450px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .circle_image_1{
-            height:35px;
-            width:35px;
-            margin-left:80%;
-            backface-visibility:hidden;            
+
+        .circle_image {
+            height: 35px;
+            width: 35px;
+            margin-left: 80%;
+            backface-visibility: hidden;
         }
-        #download_now:hover{
-            background-color: blue;
-            color:white;
+
+        /* Background Designs */
+        .background-shape {
+            
+            width: 30px;
+            height: 30px;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        /* Animated Background Circles */
+        .background-shape.circle {
+            margin-left:50%;
+            background-color: orange; /* LightSkyBlue */
+            border-radius: 20%;
+            animation-name: rotate360;
+        }
+
+        /* Animated Background Triangles */
+        .background-shape.triangle {
+            width: 60px;
+            height:30px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid aliceblue; /* Gold */
+            animation-name: moveRight,rotate360;
+        }
+
+        /* Animated Background Bubbles */
+        .background-shape.bubble {
+            background-color: #FF6347; /* Tomato */
+            border-radius: 50%;
+            animation-name: moveUp;
+        }
+
+        /* Add more shapes and animations as needed */
+
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes moveRight {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(600px);
+            }
+        }
+
+        @keyframes moveUp {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(400px);
+            }
         }
 
 
@@ -398,12 +496,12 @@
         .container_4{
               background-color: #FFF7E4;
               display: flex;
-               border-top-left-radius: 30px;
- border-top-right-radius: 30px;
- border-bottom-left-radius:30px;
- border-bottom-right-radius:30px ;
-margin-top:10%;
-padding-bottom: 10%;
+              border-top-left-radius: 30px;
+              border-top-right-radius: 30px;
+              border-bottom-left-radius:30px;
+            border-bottom-right-radius:30px ; 
+            margin-top:10%;
+            padding-bottom: 10%;
         }
 
         .maini-text_1 {
@@ -413,6 +511,323 @@ padding-bottom: 10%;
         .sub-text_1{
             margin-left: -100%;
             font-size: 0; /* Set font size to 0 initially to make it invisible */
+        }
+
+
+        .container_5{
+            padding-top:10%;
+            background-color: white;
+        margin:auto;
+        font-family:"Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+
+
+      .middle_contain_5 h1{
+            font-weight:770;
+            font-size:30px;
+            padding-left:90px;
+            margin-bottom: 10px;
+           
+            }
+        .mid_h4_5{
+            font-size:20px;
+            padding-left:90px;
+            margin-bottom: 10px;
+            }
+        .middle_contain_5 img{
+             width: 50px;
+            height: 50px;
+            margin-left:96%;
+        }
+        .ghost_5{
+             transform: rotate(8deg); 
+             height:100px;
+             width:40px;
+             border-radius: 20%;
+        }
+         .mid_51{
+            display: flex;
+            width: 100%;
+            margin: 0 ;
+            padding-left:70px;
+        }
+
+        .custom-column_5 {
+            flex: 1;
+            padding: 20px;
+            line-height: 1.5;
+            font-size:25px;
+            width:33.3%;
+        }
+
+        .custom-column_5:first-child {
+            font-size: 50px; /* Larger font size for the first column */
+            font-weight:600;
+
+        }
+
+          .container_5111 {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .line {
+            position: absolute;
+            margin-top: 10px;
+            left: 35%;
+            width: 2px;
+            height: 100%;
+            background-color: purple;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+        }
+
+        .dots {
+            position: absolute;
+            margin-top: 10px;
+            left: 35%;
+            width: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            opacity: 0.5;
+            z-index: 1;
+            gap:60px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: darkblue;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+        }
+
+        .content9 {
+            position: absolute;
+            margin-top:10px;
+            margin-left:40%;
+            padding: 20px;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #333;
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+  /* Adjust the font size of headings */
+  .mid_h1_5 {
+    font-size: 24px;
+  }
+
+  .mid_h4_5 {
+    font-size: 16px;
+  }
+
+  /* Adjust the width of the ghost image */
+  .ghost_5 {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Adjust the spacing of the columns */
+  .custom-column_5 {
+    width: 50%;
+  }
+
+  /* Hide the line and dots */
+  .line {
+    display: none;
+  }
+
+  .dots {
+    display: none;
+  }
+}
+
+.container_6{
+    background-color:#e2f2fe;
+    text-align: center;
+    border-top-left-radius: 30px;
+ border-top-right-radius: 30px;
+ border-bottom-left-radius:30px;
+ border-bottom-right-radius:30px ;
+ margin-top: 10%;
+
+}   
+     .container_6_1,
+        .container_6_4 {
+            width: 100%;  
+            padding-top: 1%; /* Adjusted padding */
+        }
+
+        .container_6_2 {
+            font-weight: 700;
+            font-size: 60px;
+        }
+
+        .circle_6_1{
+            display: inline-block;
+            height: 60px;
+                border-radius: 50%;
+            margin-left:150px; /* Adjusted margin */
+            margin-right:150px;
+            position: relative;
+        }
+        .circle_6_1 img {
+            height: 65px;
+            width: 65px;
+            
+        }
+
+        .circle_6_1:not(:first-child):before {
+            content: "";
+            position: absolute;
+            width: 480px;
+            height: 0;
+            border-bottom: 3px dashed burlywood;
+            top: -webkit-calc(50% - 3px);
+            top: calc(50% - 3px);
+            left: -413px;
+        }
+
+        .wrapper {
+            display: inline-block;
+            background: #f2f2f2;
+        }
+
+        
+
+        .text_6_1 {
+            font-size: 16px;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .container_6_4{
+            margin-top:10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40vh;
+            background-color: white;
+            margin-left:20%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius:30px;
+            border-bottom-right-radius:30px ;
+            width:60%;
+            box-shadow: 0 0 20px rgba(205, 200, 255, 0.8); /* White box shadow */
+        }
+
+         .container_6_4_1 {
+            position: relative;
+            width: 55%;
+            height: 7px;
+            border-radius: 20%;
+            background-color: lightgrey;
+        }
+
+      .slider_11 {
+  background-color: #e74c3c;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+
+.slider_22{
+  background-color: lightblue;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+
+.slider_33 {
+  background-color: orange;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+
+.slider_44{
+  background-color:lightgreen ;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+
+        .button_11,
+        .button_22,
+        .button_33,
+        .button_44 {
+            position: absolute;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button_11 {
+            width: 80px;
+            height: 40px;
+            background-color: #e74c3c;
+            color: #fff;
+            top: -60px;
+        }
+
+        .button_22 {
+            width: 130px;
+            height: 50px;
+            background-color: lightblue;
+            color: #fff;
+            font-weight: 500;
+            top: 80px;
+        }
+
+
+        .button_33 {
+            width: 130px;
+            height: 50px;
+            background-color: orange;
+            color: #fff;
+            top: -100px;
+        }
+
+        .button_44 {
+            width: 130px;
+            height: 50px;
+            background-color: lightgreen;
+            color: #fff;
+            top: 30px;
+        }
+        .main_6_1 {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px; /* Added margin bottom for spacing */
+        }
+        .trip{
+            display:inline-block;
+            margin-left:15px;
         }
     </style>
 </head>
@@ -459,68 +874,85 @@ padding-bottom: 10%;
     </script>
 
 <div class="container_2">
- <div class="left-column_1">
-        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/notification-dot-5461128-4561481.gif" class="circle_image_1">
-        <div class="sub-text_1">
+  <div class="left-column">
+        <div class="background-shape circle"></div>
+        <div class="background-shape triangle"></div>
+        <div class="background-shape bubble"></div>
+
+
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/notification-dot-5461128-4561481.gif" class="circle_image">
+        <div class="sub-text">
             <p>Ahead app</p>
         </div>
-        
-        <div class="main-text_1">
+
+        <div class="main-text">
             <h1>Master Your Life by mastering Emotions</h1>
         </div>
-<br></br>
+        <br></br>
 
-      <div class="sub-columns_1">
-        
-            <div class="sub-column_1 button-container">
-                <button class="button_1">
+        <div class="sub-columns">
+
+            <div class="sub-column button-container">
+                <button class="button">
                     <img src="ab.jpg" alt="Image">
-                    <div class="button-text_1">
+                    <div class="button-text">
                         <span>Download on the</span>
                         <span style="font-size: 18px;">App Store</span>
                     </div>
                 </button>
             </div>
 
-            <div class="sub-column_1">
-                <div class="stars-container_1">
-               <span class="fa fa-star checked gapping"></span>
-<span class="fa fa-star checked gapping"></span>
-<span class="fa fa-star checked gapping"></span>
-<span class="fa fa-star checked gapping"></span>
-<span class="fa fa-star checked gapping"></span>
-</div>
-                <span class="star-text_1">100+ AppStore Reviews</span>
+            <div class="sub-column">
+                <div class="stars-container">
+                    <span class="fa fa-star checked gapping"></span>
+                    <span class="fa fa-star checked gapping"></span>
+                    <span class="fa fa-star checked gapping"></span>
+                    <span class="fa fa-star checked gapping"></span>
+                    <span class="fa fa-star checked gapping"></span>
+                </div>
+                <span class="star-text">100+ AppStore Reviews</span>
             </div>
         </div>
+         <div class="background-shape circle"></div>
+         <div class="background-shape triangle"></div>
+     
+
     </div>
 
-    <div class="right-column_1">
-           <div class="circle-container_1">
-            <div class="inner-circle_1">
-            <img src="f" alt="Center Image">
+    <div class="right-column">
+         <div class="background-shape circle"></div>
+         <div class="background-shape triangle"></div>
+        <div class="background-shape triangle"></div>
+        <div class="background-shape bubble"></div>
+        <div class="circle-container" id="circular">
+            
+             <img src="https://appstickers-cdn.appadvice.com/1227243212/821778119/983b3e4a90861dc41fd8d054bfb05d58-0.png" class="c_image1" id="c1" alt="Image 1">
+    <img src="https://th.bing.com/th/id/OIP.k5pSq8GmfSlqtf7ghM2CcAAAAA?rs=1&pid=ImgDetMain" class="c_image2" id="c1" alt="c_image 2">
+    <img src="https://spng.pngfind.com/pngs/s/234-2345888_the-ghost-emoji-doesnt-get-enough-love-hd.png" class="c_image3" id="c1" alt="Image 3">
+    <img src="https://i.etsystatic.com/22145649/r/il/69d76b/2699372837/il_1140xN.2699372837_s7ye.jpg" class="c_image4" id="c1" alt="Image 4">
+    <img src="https://th.bing.com/th/id/OIP.1VyBXlqw7KcljMjSPQaVdQHaHu?w=1140&h=1190&rs=1&pid=ImgDetMain" class="c_image5" id="c1" alt="Image 5">
+    <img src="https://img2.cgtrader.com/items/2627448/97ebbf7239/emoji-ghost-3d-model-max-obj-fbx.jpg" class="c_image6" id="c1" alt="Image 6">
 
+            
         </div>
+        <div class="inner-circle">
+            </div>
     </div>
-    </div>
-    <script>
-      gsap.to('.sub-text_1', {
-            duration: 3.5,
-            ease: 'elastic.out(3,3.3)', // Elastic ease
-            marginLeft: '0%', // Move to the final position
-            fontSize: '30px', // Set the final font size
-            repeat:-1,
-        });
-      gsap.to('.main-text_1', {
-            duration: 3.5,
-            ease: 'elastic.out(3,3.3)', // Elastic ease
-            marginLeft: '0%', // Move to the final position
-            fontSize: '60px', // Set the final font size
-            repeat:-1,
-        });
 
-       
+    <script>
+        // GSAP Animations
+        gsap.fromTo(".background-shape.circle", { rotate: 0 }, { rotate: 120, duration: 3, ease: "linear", repeat: -1 });
+        gsap.fromTo(".background-shape.triangle", { rotate:0,x: 0 }, { rotate:450,x: 100, duration: 6, ease: "linear", repeat: -1 });
+        gsap.fromTo(".background-shape.bubble", { y: 0 }, { y: 300, duration: 3, ease: "linear", repeat: -1 });
+        // Add more animations as needed
     </script>
+      <script>
+
+    gsap.to('#circular', { rotation: 360, duration: 7, repeat:-1, ease: 'linear' });
+    gsap.to('#c1', { rotation: 360, duration: 7, repeat: -1, ease: 'linear' });
+   gsap.to('.inner-circle', { scale: 1.2, duration: 1, yoyo: true, repeat: 3, ease: 'power1.inOut' });
+  </script>
+
 
     </div>
 
@@ -551,7 +983,7 @@ padding-bottom: 10%;
             <div class="item-container">
                 <img src="https://hotemoji.com/images/dl/q/angry-face-emoji-by-twitter.png">
                 <br>
-                <b>You argue with a collegue</b>
+                <h4>You argue with a collegue</h4>
                 <p>People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships</p>
             </div>
         </sv-scrollable-item>
@@ -559,7 +991,7 @@ padding-bottom: 10%;
             <div class="item-container">
                   <img src="https://hotemoji.com/images/dl/q/angry-face-emoji-by-twitter.png">
                 <br>
-                <b>You argue with a collegue</b>
+                <h4>You argue with a collegue</h4>
                 <p>People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships</p>
             </div>
 
@@ -568,7 +1000,7 @@ padding-bottom: 10%;
             <div class="item-container">  
                 <img src="https://hotemoji.com/images/dl/q/angry-face-emoji-by-twitter.png">
                 <br>
-                <b>You argue with a collegue</b>
+                <h4>You argue with a collegue</h4>
                 <p>People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships</p></div>
         </sv-scrollable-item>
         <sv-scrollable-item>
@@ -631,10 +1063,8 @@ padding-bottom: 10%;
             opacity: 1,
              repeat:-1,
             delay: 0 // Delay the image animation to start after h1 animation
-
         });
     </script>
-    
 </div>
 
 <div class="container_4">
@@ -721,6 +1151,215 @@ padding-bottom: 10%;
         });
     </script>
     </div>
+
+
+
+
+
+<div class="container_5">
+        <div class="middle_contain_5">
+    <div class="mid_5">
+                <p class="mid_h4_5">Wrong with self-improvement & how we're fixing it.</p>
+        <h1 class="mid_h1_5"> Self-improvement. Ugh.  </h1>
+        <img src="https://www.shutterstock.com/image-vector/cute-ghost-emoji-icon-on-260nw-1487421851.jpg" class="ghost_5">
+       </div>
+
+         <div class="container_5111">
+        <div class="line"></div>
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          
+
+        </div>
+        <div class="content9">
+            <div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long.but our sessions are quick. We get to the point and tell  </p>
+            </div>
+            <div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long,but our sessions are quick. We get to the point and tell </p>
+            </div>
+         <div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long,but our sessions are quick. We get to the point and tell </p>
+            </div>
+            <div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long.but our sessions are quick. We get to the point and tell </p>
+            </div>
+           <div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long,but our sessions are quick. We get to the point and tell </p>
+            </div>
+<div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long,but our sessions are quick. We get to the point and tell </p>
+            </div>
+            <div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long,but our sessions are quick. We get to the point and tell</p>
+            </div>
+           <div class="text">
+                <h2>Its not as easy as 1-2-3</h2>
+                <p>The journey of change may be long </p>
+            </div>
+            <div class="text">
+                <h2>Matter 9</h2>
+                <p>Details about Matter 1</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const line = document.querySelector('.line');
+        const dots = document.querySelector('.dots');
+        const dotElements = document.querySelectorAll('.dot');
+        const content = document.querySelector('.content9');
+        const textElements = document.querySelectorAll('.text');
+
+        gsap.to(line, { height: '80%', duration: 1, delay: 1, repeat:-1,ease: 'power2.inOut' });
+
+        gsap.to(dots, { opacity: 1, duration: 1,repeat:-1, delay: 2 });
+
+        dotElements.forEach((dot, index) => {
+            gsap.to(dot, { height: '20px', width: '20px',repeat:-1, duration: 1, delay: 1 + index * 0.5 });
+        });
+
+        textElements.forEach((text, index) => {
+            gsap.from(text, { opacity: 0, y: '50%', duration: 1, repeat:-1,delay: 1 + index * 1, ease: 'power3.out' });
+        });
+    </script>
+
+       <div class="mid_51">
+       <div class="custom-column_5" id="asdf">
+            <p>Be the best you with EQ</p>
+        </div>
+        <div class="custom-column_5">
+            <p>People with high emotional intelligence (EQ) live more fulfilled lives. They tend to be happier and have healthier relationships.</p>
+        </div>
+        <div class="custom-column_5">
+            <p>They are more successful in their pursuits and make for inspiring leaders. According to science, they earn $29k a year.</p>
+        </div>
+       </div>
+        </div>
+</body>
+ <script>
+      gsap.to('.mid_h1_5', {
+            duration: 3.5,
+            ease: 'elastic.out(2,1.3)', // Elastic ease
+            marginLeft: '0%', // Move to the final position
+            fontSize: '60px', // Set the final font size
+            repeat:-1
+        });
+
+       gsap.to('.mid_h4_5', {
+            duration: 3.5,
+            ease: 'elastic.out(2,1.3)', // Elastic ease
+            marginLeft: '0%', 
+            repeat:-1,// Move to the final position
+            fontSize: '20px', // Set the final font size
+
+        });
+
+        // GSAP Animation for ghost image
+        gsap.fromTo('.ghost_5', {
+            x: '100%', // Start from the right
+            opacity: 0,
+            repeat:-1
+        }, {
+            duration: 3.5,
+            ease: 'elastic.out(3, 1.5)', // Elastic ease
+            x: -620, // Move to the original position of h1
+            y:-50,
+            opacity: 1,
+            repeat:-1,
+            delay: 0.5 // Delay the image animation to start after h1 animation
+        });
+    </script>
+</div>
+
+
+<div class="container_6">
+
+    <div class="container_6_1">
+        <p>Let your friends, family, and co-workers (anonymously) rate your social skills.</p>
+        <p class="container_6_2">Ever Wondered what others think about you</p>
+    </div>
+
+    
+<div class="main_6_1">
+        <div class="circle_6_1"><img src="https://us.123rf.com/450wm/yupiramos/yupiramos1805/yupiramos180516577/101511755-cover-frame-victorian-golden-style-with-floral-shape-vector-illustration-design.jpg?ver=6" />  <p>Let your friends, family, and co-workers (anonymously) rate your social skills.</p></div>
+
+        <div class="circle_6_1"><img src="https://us.123rf.com/450wm/yupiramos/yupiramos1805/yupiramos180516577/101511755-cover-frame-victorian-golden-style-with-floral-shape-vector-illustration-design.jpg?ver=6" />
+            <p>Let your friends, family, and co-workers (anonymously) rate your social skills.</p></div>
+        <div class="circle_6_1"><img src="https://us.123rf.com/450wm/yupiramos/yupiramos1805/yupiramos180516577/101511755-cover-frame-victorian-golden-style-with-floral-shape-vector-illustration-design.jpg?ver=6" />
+
+            <p>Let your friends, family, and co-workers (anonymously) rate your social skills.</p></div>
+</div>
+  
+
+    <div class="container_6_4">
+        <div class="container_6_4_1">
+
+        <div class="slider_11"></div>
+        <button class="button_11" style="left: 0;">You</button>
+
+        <div class="slider_22" style="left: 25%;"></div>
+        <button class="button_22" style="left: 25%;">Anonynomous 1</button>
+
+        <div class="slider_33" style="left: 50%;"></div>
+        <button class="button_33" style="left: 50%;">Anonynomous 2</button>
+
+        <div class="slider_44" style="left: 75%;"></div>
+        <button class="button_44" style="left: 75%;">Anonynomous 3</button>
+    
+
+    <script>
+        gsap.from(".slider_11, .button_11", { opacity: 0, y: -50, duration: 1,repeat:-1, ease: "elastic.out(1, 0.5)" });
+        gsap.from(".slider_22, .button_22", { opacity: 0, y: -50, duration: 1,repeat:-1, ease: "elastic.out(1, 0.5)", delay: 0.5 });
+        gsap.from(".slider_33, .button_33", { opacity: 0, y: -50, duration: 1, repeat:-1,ease: "elastic.out(1, 0.5)", delay: 1 });
+        gsap.from(".slider_44, .button_44", { opacity: 0, y: -50, duration: 1,repeat:-1, ease: "elastic.out(1, 0.5)", delay: 1.5 });
+
+    </script>
+        </div>
+    </div>
+
+    <script>
+        gsap.from(".circle_6_1 img, .text_6_1", {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            stagger: 0.5,
+            repeat:-1,
+            ease: "power3.out",
+        });
+         gsap.from(".circle_6_1 p, .text_6_1", {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            stagger: 0.5,
+            repeat:-1,
+            ease: "power4.out",
+        });
+          gsap.from(".container_6_1", {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            stagger: 0.5,
+            repeat:-1,
+            ease: "power4.out",
+        });
+    </script>
+
+</div>
 
 </body>
 
