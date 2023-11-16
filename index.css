@@ -934,3 +934,145 @@ i{
  margin-top:40px;
 
 }
+
+
+/* Add a media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .container_2 {
+        padding: 5%;
+    }
+
+    .left-column, .right-column {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .main-text {
+        font-size: 40px;
+    }
+
+    .sub-text {
+        font-size: 18px;
+    }
+
+    .stars-container {
+        padding-left: 15px;
+    }
+
+    .circle-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .inner-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .custom-container {
+        flex-direction: column;
+    }
+
+    .custom-column {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .item-container {
+        width: 100%;
+    }
+
+    .middle_contain img {
+        width: 30px;
+        height: 30px;
+        margin-left: 90%;
+    }
+
+    .container_3 {
+        margin-top: 5%;
+    }
+
+    .container_4, .container_5, .container_6, .container_7, .container_8 {
+        width: 100%;
+    }
+
+    .middle_contain, .mid_h1, .bottom_contain {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .circle-container img:nth-child(1),
+    .circle-container img:nth-child(2),
+    .circle-container img:nth-child(3),
+    .circle-container img:nth-child(4),
+    .circle-container img:nth-child(5),
+    .circle-container img:nth-child(6) {
+        transform: none;
+    }
+
+    .small_circle, .small_circle1 {
+        margin-left: 0;
+        transform: none;
+    }
+
+    .container_5111 {
+        height: auto;
+    }
+
+    .line, .dots, .content9 {
+        display: none;
+    }
+
+    .custom-column_5 {
+        width: 100%;
+    }
+
+    .container_6_1:before {
+        content: none;
+    }
+
+    .container_6_2 {
+        font-size: 30px;
+    }
+
+    .circle_6_1 img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .button_11, .button_22, .button_33, .button_44 {
+        width: 100%;
+    }
+
+    .main_6_1 {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .trip {
+        margin-left: 0;
+    }
+
+    .ghost_5 {
+        width: 20px;
+        height: 20px;
+    }
+
+    .container_8 .sections-container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .section {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .polo {
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+}
+
